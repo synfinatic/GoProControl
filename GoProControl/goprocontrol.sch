@@ -268,19 +268,16 @@
 <rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
 <rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
 </package>
-<package name="SOD-123">
-<smd name="A" x="0.63" y="0.5" dx="0.9" dy="0.95" layer="1"/>
-<smd name="C" x="3.64" y="0.49" dx="0.9" dy="0.95" layer="1" rot="R180"/>
-<wire x1="1.7" y1="1.1" x2="1.7" y2="0" width="0.127" layer="104"/>
-<wire x1="1.7" y1="0" x2="2.7" y2="0.5" width="0.127" layer="104"/>
-<wire x1="2.7" y1="0.5" x2="1.7" y2="1.1" width="0.127" layer="104"/>
-<wire x1="2.7" y1="1" x2="2.7" y2="0.1" width="0.127" layer="104"/>
-<wire x1="2.7" y1="1" x2="2.8" y2="1" width="0.127" layer="104"/>
-<wire x1="2.8" y1="1" x2="2.8" y2="1.1" width="0.127" layer="104"/>
-<wire x1="2.7" y1="0.1" x2="2.6" y2="0.1" width="0.127" layer="104"/>
-<wire x1="2.6" y1="0.1" x2="2.6" y2="0" width="0.127" layer="104"/>
-<wire x1="1.2" y1="0.5" x2="3.1" y2="0.5" width="0.127" layer="104"/>
-<text x="0" y="1.27" size="0.6096" layer="21">&gt;NAME</text>
+<package name="SOD-323">
+<wire x1="-0.9" y1="0.65" x2="-0.5" y2="0.65" width="0.2032" layer="21"/>
+<wire x1="-0.5" y1="0.65" x2="0.9" y2="0.65" width="0.2032" layer="21"/>
+<wire x1="-0.9" y1="-0.65" x2="-0.5" y2="-0.65" width="0.2032" layer="21"/>
+<wire x1="-0.5" y1="-0.65" x2="0.9" y2="-0.65" width="0.2032" layer="21"/>
+<wire x1="-0.5" y1="0.65" x2="-0.5" y2="-0.65" width="0.2032" layer="21"/>
+<smd name="C" x="-1.15" y="0" dx="0.63" dy="0.83" layer="1"/>
+<smd name="A" x="1.15" y="0" dx="0.63" dy="0.83" layer="1"/>
+<text x="-0.889" y="1.016" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.016" y="-1.397" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
 <package name="SOD-323F">
 <description>SOD-323 (imported from Adafruit library)</description>
@@ -336,6 +333,24 @@
 <wire x1="14.25" y1="5" x2="12.75" y2="5" width="0.127" layer="21"/>
 <wire x1="12.75" y1="5" x2="12.75" y2="4.95" width="0.127" layer="21"/>
 <wire x1="-1.8" y1="-4.7" x2="-1.8" y2="4.9" width="0.127" layer="21"/>
+</package>
+<package name="SOD-123">
+<wire x1="-1" y1="0.7" x2="1" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="1" y1="0.7" x2="1" y2="-0.7" width="0.1524" layer="21"/>
+<wire x1="1" y1="-0.7" x2="-1" y2="-0.7" width="0.1524" layer="21"/>
+<wire x1="-1" y1="-0.7" x2="-1" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="0" x2="0.1" y2="0.4" width="0.1524" layer="21"/>
+<wire x1="0.1" y1="0.4" x2="0.1" y2="-0.4" width="0.1524" layer="21"/>
+<wire x1="0.1" y1="-0.4" x2="-0.5" y2="0" width="0.1524" layer="21"/>
+<wire x1="-1.778" y1="0.762" x2="1.778" y2="0.762" width="0.127" layer="21"/>
+<wire x1="1.778" y1="0.762" x2="1.778" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="1.778" y1="-0.762" x2="-1.778" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-1.778" y1="-0.762" x2="-1.778" y2="0.762" width="0.127" layer="21"/>
+<smd name="C" x="-1.85" y="0" dx="1.2" dy="0.7" layer="1"/>
+<smd name="A" x="1.85" y="0" dx="1.2" dy="0.7" layer="1"/>
+<text x="-1.1" y="1" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.1" y="-1.284" size="0.4064" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.7" y1="-0.7" x2="-0.5" y2="0.7" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -468,7 +483,16 @@
 <technology name=""/>
 </technologies>
 </device>
-<device name="SOD-323" package="SOD-323F">
+<device name="SOD-323F" package="SOD-323F">
+<connects>
+<connect gate="D$1" pin="A" pad="A"/>
+<connect gate="D$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="SOD-323">
 <connects>
 <connect gate="D$1" pin="A" pad="A"/>
 <connect gate="D$1" pin="C" pad="C"/>
@@ -5093,7 +5117,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
 <part name="R4" library="Seeed-OPL-Resistor" deviceset="SMD-RES-1K-5%-1/8W(0805)" device="" value="1K"/>
-<part name="D2" library="synfinatic" deviceset="SCHOTTKY-DIODE" device="SOD-323" value="B5817WS"/>
+<part name="D2" library="synfinatic" deviceset="SCHOTTKY-DIODE" device="" value="B5817WS"/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="+12V" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="FTDI_DEVICE" device=""/>
