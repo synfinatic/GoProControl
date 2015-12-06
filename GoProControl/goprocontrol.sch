@@ -307,6 +307,35 @@
 <pad name="P$2" x="3.5" y="0" drill="0.8"/>
 <pad name="P$3" x="7" y="0" drill="0.8"/>
 <pad name="P$4" x="10.5" y="0" drill="0.8"/>
+<wire x1="12.75" y1="7.3" x2="-1.8" y2="7.3" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="7.3" x2="-2.75" y2="7.3" width="0.127" layer="21"/>
+<wire x1="-2.75" y1="7.3" x2="-2.75" y2="-4.7" width="0.127" layer="21"/>
+<wire x1="-2.75" y1="-4.7" x2="12.75" y2="-4.7" width="0.127" layer="21"/>
+<wire x1="12.75" y1="-4.7" x2="12.75" y2="4.9" width="0.127" layer="21"/>
+<wire x1="12.75" y1="4.95" x2="12.75" y2="7.3" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="7.3" x2="-1.8" y2="-4.75" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="4.95" x2="12.75" y2="4.95" width="0.127" layer="21"/>
+<wire x1="12.75" y1="4.95" x2="12.75" y2="4.9" width="0.127" layer="21"/>
+</package>
+<package name="4-3.5IP-2">
+<pad name="P$1" x="0" y="0" drill="0.8" shape="square"/>
+<pad name="P$2" x="3.5" y="0" drill="0.8"/>
+<pad name="P$3" x="7" y="0" drill="0.8"/>
+<pad name="P$4" x="10.5" y="0" drill="0.8"/>
+<wire x1="-1.8" y1="-4.7" x2="12.75" y2="-4.7" width="0.127" layer="21"/>
+<wire x1="12.75" y1="-4.7" x2="12.75" y2="4.95" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="4.95" x2="12.75" y2="4.95" width="0.127" layer="21"/>
+<wire x1="14.25" y1="7.3" x2="14.25" y2="7.35" width="0.127" layer="21"/>
+<wire x1="14.25" y1="-4.7" x2="12.75" y2="-4.7" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-4.7" x2="-1.8" y2="-7.3" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-7.3" x2="14.3" y2="-7.3" width="0.127" layer="21"/>
+<wire x1="14.3" y1="-7.3" x2="14.3" y2="-4.75" width="0.127" layer="21"/>
+<wire x1="14.3" y1="-4.75" x2="14.3" y2="-4.65" width="0.127" layer="21"/>
+<wire x1="14.3" y1="-4.75" x2="14.25" y2="-4.75" width="0.127" layer="21"/>
+<wire x1="14.25" y1="-4.75" x2="14.25" y2="5" width="0.127" layer="21"/>
+<wire x1="14.25" y1="5" x2="12.75" y2="5" width="0.127" layer="21"/>
+<wire x1="12.75" y1="5" x2="12.75" y2="4.95" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-4.7" x2="-1.8" y2="4.9" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -459,6 +488,17 @@ http://www.digikey.com/product-detail/en/1984989/277-6404-ND/2513979</descriptio
 </gates>
 <devices>
 <device name="" package="4-3.5IP">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="P$3" pad="P$3"/>
+<connect gate="G$1" pin="P$4" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="4-3.5IP-2" package="4-3.5IP-2">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
@@ -5061,7 +5101,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
 <part name="R3" library="Seeed-OPL-Resistor" deviceset="SMD-RES-1K-5%-1/8W(0805)" device="" value="1K"/>
 <part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="U$4" library="synfinatic" deviceset="PTSA-1.5/4-3.5F" device=""/>
+<part name="U$4" library="synfinatic" deviceset="PTSA-1.5/4-3.5F" device="4-3.5IP-2" value="PTSA-1.5/4-3.5F4-3.5IP-2"/>
 </parts>
 <sheets>
 <sheet>
