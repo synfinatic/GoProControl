@@ -157,6 +157,10 @@
 <hole x="49.26" y="49.26" drill="2"/>
 <hole x="3.5" y="29.15" drill="5"/>
 <hole x="50.6" y="29.1" drill="5"/>
+<text x="48" y="16" size="1.016" layer="52" rot="MR0">GoProControl v0.1
+http://synfin.net/goprocontrol</text>
+<text x="48" y="11.5" size="1.778" layer="52" rot="MR0">S/N:</text>
+<rectangle x1="25" y1="10" x2="42" y2="15" layer="52"/>
 </plain>
 <libraries>
 <library name="Seeed-OPL-Capacitor">
@@ -1775,7 +1779,7 @@ design rules under a new name.</description>
 <vertex x="31.75" y="34.29"/>
 <vertex x="1.27" y="34.29"/>
 </polygon>
-<via x="3" y="36" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="3" y="36" extent="1-16" drill="0.8"/>
 <via x="3" y="40" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
 <via x="3" y="44" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
 <via x="3" y="48" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
@@ -1784,7 +1788,7 @@ design rules under a new name.</description>
 <via x="6" y="46" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
 <via x="6" y="42" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
 <via x="6" y="38" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
-<via x="9" y="36" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="9" y="36" extent="1-16" drill="0.8"/>
 <via x="9" y="40" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
 <via x="9" y="44" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
 <via x="12" y="50" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
@@ -1856,6 +1860,37 @@ design rules under a new name.</description>
 <wire x1="38.9763" y1="6.1722" x2="37.719" y2="7.4295" width="0.254" layer="16"/>
 <wire x1="28.9179" y1="6.1722" x2="28.8638" y2="6.0706" width="0.254" layer="16"/>
 <wire x1="38.9763" y1="6.1722" x2="39.0238" y2="6.0706" width="0.254" layer="16"/>
+<polygon width="0.254" layer="16">
+<vertex x="0" y="52"/>
+<vertex x="0" y="0"/>
+<vertex x="54.4" y="0"/>
+<vertex x="54.4" y="-0.1"/>
+<vertex x="54.45" y="-0.1"/>
+<vertex x="54.45" y="52"/>
+</polygon>
+<polygon width="0.254" layer="1">
+<vertex x="0" y="52"/>
+<vertex x="0" y="0"/>
+<vertex x="54.55" y="0"/>
+<vertex x="54.55" y="0.05"/>
+<vertex x="54.45" y="0.05"/>
+<vertex x="54.45" y="52"/>
+</polygon>
+<via x="9" y="33" extent="1-16" drill="0.8"/>
+<via x="9" y="29" extent="1-16" drill="0.8"/>
+<via x="9" y="25" extent="1-16" drill="0.8"/>
+<via x="6" y="24" extent="1-16" drill="0.8"/>
+<via x="3" y="21" extent="1-16" drill="0.8"/>
+<via x="33" y="44" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="33" y="40" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="37" y="45" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="41" y="45" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="45" y="45" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="49" y="45" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="52" y="42" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="51" y="38" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="49" y="35" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
+<via x="24" y="33" extent="1-16" drill="0.8" diameter="1.6764" shape="square"/>
 </signal>
 <signal name="3.3V" class="2">
 <contactref element="U$2" pad="3"/>
@@ -2064,4 +2099,10 @@ design rules under a new name.</description>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
