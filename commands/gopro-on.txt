@@ -1,0 +1,11 @@
+GET /bacpac/PW?t=falcon123&p=%01 HTTP/1.1
+Host: 10.5.5.9
+Origin: http://synfin.net
+Connection: keep-alive
+Accept: */*
+User-Agent: NetCat
+Accept-Language: en-us
+Referer: http://synfin.net/GoProControl
+Accept-Encoding: gzip, deflate
+
+
