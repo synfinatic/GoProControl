@@ -5182,6 +5182,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="S2" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="25.4" x2="60.96" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="20.32" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
+<junction x="53.34" y="20.32"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="GND"/>
@@ -5200,6 +5201,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="22.86" y1="-27.94" x2="40.64" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-27.94" x2="40.64" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
+<junction x="40.64" y="-27.94"/>
 </segment>
 </net>
 <net name="3.3V" class="2">
@@ -5210,6 +5212,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="SUPPLY1" gate="G$1" pin="3.3V"/>
 <wire x1="127" y1="-2.54" x2="127" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
+<junction x="127" y="-12.7"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
@@ -5224,6 +5227,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="7.62" y1="55.88" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="53.086" x2="7.62" y2="55.88" width="0.1524" layer="91"/>
 <junction x="7.62" y="55.88"/>
+<junction x="12.7" y="55.88"/>
 </segment>
 <segment>
 <wire x1="124.46" y1="30.48" x2="120.396" y2="30.48" width="0.1524" layer="91"/>
@@ -5257,6 +5261,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="93.98" y1="-2.54" x2="93.98" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="+12V" pin="+12V"/>
 <pinref part="C1" gate="G$1" pin="2"/>
+<junction x="93.98" y="-12.7"/>
 </segment>
 <segment>
 <wire x1="-35.56" y1="7.62" x2="-22.86" y2="7.62" width="0.1524" layer="91"/>
@@ -5333,6 +5338,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="111.76" y1="60.96" x2="127" y2="60.96" width="0.1524" layer="91"/>
 <label x="121.92" y="60.96" size="1.778" layer="95"/>
+<junction x="111.76" y="60.96"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="ANODE"/>
@@ -5407,6 +5413,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,101.6,-12.7,U$2,IN,+12V,,,"/>
+<approved hash="104,1,121.92,-12.7,U$2,+3V3,3.3V,,,"/>
+<approved hash="106,1,124.46,27.94,CTS,,,,,"/>
+<approved hash="106,1,124.46,38.1,DTR,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
