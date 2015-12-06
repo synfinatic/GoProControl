@@ -12,18 +12,18 @@ GoProControl is a simple box you can plug into your car or motorcycle and connec
 
 GoProControl has 4 pins:
 
- 1. +12V
+ 1. +5-12V
  2. GND
  3. Digital Input 
  4. Digital Ouput
  
 When GoProControl is turned on, it will send a signal to the GoPro to also turn on- which may take a few seconds.  When the Digital Input is connected to ground (GND) it will tell the GoPro to start recording. 
 
-When the Digital Input is disconnected from ground (floating or +12V) it will tell the GoPro to stop recording.  You should configure your GoPro to auto-off after 60seconds to save battery.
+When the Digital Input is disconnected from ground (floating or +3.3-12V) it will tell the GoPro to stop recording.  You should configure your GoPro to auto-off after 60seconds to save battery.
 
-Note, when the Digital Input is connected to ground, the Digital Output will be driven to 3.3V.  This is so if your data logger does not have an output channel you can control, you can use a simple toggle switch to both turn on the GoPro and mark the time when recording started in your data logger.
+Note, when the Digital Input is connected to ground, the Digital Output will be driven to 3.3V.  This is so if your data logger does not have an output channel you can control, you can use a simple toggle switch to both turn on the GoPro and mark the time when recording started in your data logger using an input channel on your data logger.
 
-
+**Note:** If you have the option of powering this by 5 or 12V, use 5V.  If using your vehicle's battery, be sure it is switched with the ignition to prevent draining your battery.
 
 ## Links
 Links to projects or information that was critical to me creating this project.  Thank you!
