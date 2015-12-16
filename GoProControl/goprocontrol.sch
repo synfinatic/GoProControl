@@ -5596,7 +5596,6 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <pinref part="F1" gate="G$1" pin="1"/>
 <wire x1="129.54" y1="-27.94" x2="129.54" y2="-22.86" width="0.1524" layer="91"/>
 <junction x="129.54" y="-27.94"/>
-<label x="129.54" y="-27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
