@@ -13,27 +13,27 @@
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
-
 #include <ESP8266HTTPClient.h>
 
 #define USE_SERIAL Serial
 
 ESP8266WiFiMulti WiFiMulti;
+HTTPClient http;
 
-#define GPIO D2 // GPIO2
+#define GPIO 2 // GPIO2
 #define SERIAL_SPEED 115200
 #define DEBUG_WIFI 1
 #define SSID "GoPro-SSID" // SSID of your GoPro
 #define WIFI_PASSWORD "happyclam"
+#define HTTP_CODE_OK 200
 
-enum {
+typedef enum {
     START,
     STOP,
     NO_CHANGE
 } Recording;
 
 Recording recording = NO_CHANGE;
-HTTPClient http;
 
 /*
  * Send a HTTP request up to <retries> times with a <delay_ms> delay.
@@ -41,12 +41,12 @@ HTTPClient http;
  * every 10 times
  */
 bool
-send_request(char *request_fmt, int retries = 5, int delay_ms = 100) {
+send_request(const char request_fmt[], int retries = 5, int delay_ms = 100) {
     int httpCode;
     char request_str[100];
     int times = 0;
 
-    request_str = snprintf(request_fmt, GOPRO_IP, WIFI_PASSWORD);
+    sprintf(request_str, request_fmt, WIFI_PASSWORD);
 
     while (((times < retries) && retries > 0) || (retries < 0)) {
         if ((WiFiMulti.run() == WL_CONNECTED)) {
@@ -56,10 +56,10 @@ send_request(char *request_fmt, int retries = 5, int delay_ms = 100) {
                 http.end();
                 return true;
             } else if (times % 10 == 0) {
-                USE_SERIAL.printf("HTTP GET failed with: %s", http.errorToString(httpCode).c_str());
+                USE_SERIAL.printf("HTTP GET failed with: %d", httpCode);
             }
         } else if (times % 10 == 0) {
-            USE_SERIAL.printf("Not connected to GoPro WiFi\n")
+            USE_SERIAL.printf("Not connected to GoPro WiFi\n");
         }
         if (retries > 0)
             times ++;
