@@ -161,8 +161,8 @@
 <hole x="35.16" y="46.46" drill="2"/>
 <hole x="3.5" y="29.15" drill="5"/>
 <hole x="50.6" y="29.1" drill="5"/>
-<text x="39" y="31" size="1.016" layer="26" rot="MR0">GoProControl v0.7
-http://synfin.net/goprocontrol</text>
+<text x="39" y="31" size="1.016" layer="26" rot="MR0">GoProControl v0.8
+https://synfin.net/goprocontrol</text>
 <text x="24" y="48.5" size="1.778" layer="26" rot="MR0">S/N:</text>
 <rectangle x1="1" y1="46" x2="18" y2="51" layer="26"/>
 <text x="24.45" y="39.75" size="1.27" layer="26" rot="MR90">GND</text>
@@ -211,25 +211,26 @@ http://synfin.net/goprocontrol</text>
 <vertex x="0.2" y="-0.2"/>
 </polygon>
 </package>
-<package name="4-3.5IP-2">
-<pad name="P$1" x="0" y="0" drill="1.016" diameter="1.8796" shape="square"/>
-<pad name="P$2" x="3.5" y="0" drill="1.016" diameter="1.8796"/>
-<pad name="P$3" x="7" y="0" drill="1.016" diameter="1.8796"/>
-<pad name="P$4" x="10.5" y="0" drill="1.016" diameter="1.8796"/>
-<wire x1="-1.8" y1="-4.7" x2="12.75" y2="-4.7" width="0.127" layer="21"/>
-<wire x1="12.75" y1="-4.7" x2="12.75" y2="4.95" width="0.127" layer="21"/>
-<wire x1="-1.75" y1="4.95" x2="12.75" y2="4.95" width="0.127" layer="21"/>
-<wire x1="14.25" y1="7.3" x2="14.25" y2="7.35" width="0.127" layer="21"/>
-<wire x1="14.25" y1="-4.7" x2="12.75" y2="-4.7" width="0.127" layer="21"/>
-<wire x1="-1.8" y1="-4.7" x2="-1.8" y2="-7.3" width="0.127" layer="21"/>
-<wire x1="-1.8" y1="-7.3" x2="14.3" y2="-7.3" width="0.127" layer="21"/>
-<wire x1="14.3" y1="-7.3" x2="14.3" y2="-4.75" width="0.127" layer="21"/>
-<wire x1="14.3" y1="-4.75" x2="14.3" y2="-4.65" width="0.127" layer="21"/>
-<wire x1="14.3" y1="-4.75" x2="14.25" y2="-4.75" width="0.127" layer="21"/>
-<wire x1="14.25" y1="-4.75" x2="14.25" y2="5" width="0.127" layer="21"/>
-<wire x1="14.25" y1="5" x2="12.75" y2="5" width="0.127" layer="21"/>
-<wire x1="12.75" y1="5" x2="12.75" y2="4.95" width="0.127" layer="21"/>
-<wire x1="-1.8" y1="-4.7" x2="-1.8" y2="4.9" width="0.127" layer="21"/>
+<package name="TERM-4P-3.5">
+<wire x1="-1.745" y1="3.5" x2="12.255" y2="3.5" width="0.127" layer="21"/>
+<wire x1="12.255" y1="3.5" x2="12.255" y2="2.1" width="0.127" layer="21"/>
+<wire x1="12.255" y1="2.1" x2="12.255" y2="-2.1" width="0.127" layer="21"/>
+<wire x1="12.255" y1="-2.1" x2="12.255" y2="-3.5" width="0.127" layer="21"/>
+<wire x1="12.255" y1="-3.5" x2="-1.745" y2="-3.5" width="0.127" layer="21"/>
+<wire x1="-1.745" y1="-3.5" x2="-1.745" y2="-2.1" width="0.127" layer="21"/>
+<wire x1="-1.745" y1="-2.1" x2="-1.745" y2="2.1" width="0.127" layer="21"/>
+<wire x1="-1.745" y1="2.1" x2="-1.745" y2="3.5" width="0.127" layer="21"/>
+<wire x1="-1.745" y1="-2.1" x2="12.255" y2="-2.1" width="0.127" layer="21"/>
+<circle x="0.025" y="0" radius="1.5" width="0.127" layer="21"/>
+<circle x="3.485" y="0" radius="1.5" width="0.127" layer="21"/>
+<pad name="1" x="0.005" y="0" drill="1" diameter="1.85" shape="square"/>
+<pad name="2" x="3.505" y="0" drill="1" diameter="1.85"/>
+<text x="2.85" y="3.81" size="0.889" layer="25" ratio="11">&gt;name</text>
+<text x="2.75" y="-4.445" size="0.889" layer="27" ratio="11">&gt;value</text>
+<pad name="3" x="7.005" y="0" drill="1" diameter="1.85"/>
+<pad name="4" x="10.505" y="0" drill="1" diameter="1.85"/>
+<circle x="6.985" y="0" radius="1.5" width="0.127" layer="21"/>
+<circle x="10.485" y="0" radius="1.5" width="0.127" layer="21"/>
 </package>
 <package name="POLOLU-D24V5FX">
 <wire x1="0" y1="0" x2="0" y2="12.7" width="0.127" layer="21"/>
@@ -329,17 +330,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="VCC" x="7.62" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="CTS" x="10.16" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="GND" x="12.7" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<text x="1.1938" y="-2.6162" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="3.175" y="2.54" size="1.27" layer="27">&gt;VALUE</text>
-<text x="-0.635" y="4.445" size="0.762" layer="51" rot="R270">GRN</text>
-<text x="12.065" y="4.445" size="0.762" layer="51" rot="R270">BLK</text>
+<text x="1.8288" y="-2.6162" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="1.905" y="3.175" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="3.175" size="0.762" layer="21">GRN</text>
+<text x="11.43" y="3.175" size="0.762" layer="21">BLK</text>
 <rectangle x1="12.446" y1="-0.254" x2="12.954" y2="0.254" layer="51"/>
 <rectangle x1="9.906" y1="-0.254" x2="10.414" y2="0.254" layer="51"/>
 <rectangle x1="7.366" y1="-0.254" x2="7.874" y2="0.254" layer="51"/>
 <rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-<text x="-1.27" y="1.27" size="0.7112" layer="51" distance="45">DTR RXI TXO VCC CTS GND</text>
+<text x="-1.27" y="1.905" size="0.7112" layer="21" distance="45">DTR RXI TXO VCC CTS GND</text>
 </package>
 </packages>
 </library>
@@ -676,7 +677,9 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="MPN" value="LTV-816S" x="42.83" y="23.05" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="40.29" y="20.51" size="0.8128" layer="25" rot="R90"/>
 </element>
-<element name="U$4" library="synfinatic" package="4-3.5IP-2" value="PTSA-1.5/4-3.5F4-3.5IP-2" x="24.99" y="38.37"/>
+<element name="JP3" library="synfinatic" package="TERM-4P-3.5" value="PTSA-1.5/4-3.5FOST-TE-3.5-4P" x="24.99" y="38.37" smashed="yes">
+<attribute name="NAME" x="27.84" y="42.18" size="0.889" layer="25" ratio="11"/>
+</element>
 <element name="R6" library="Seeed-OPL-Resistor" package="R0805" value="10K" x="7.05" y="25.25" smashed="yes">
 <attribute name="MPN" value="RC0805FR-0710KL" x="7.05" y="25.25" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="5.066" y="25.155" size="0.889" layer="25" font="vector" ratio="11" rot="R270"/>
@@ -693,7 +696,7 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="C1" library="Seeed-OPL-Capacitor" package="C0805" value="1uf" x="27.1" y="12.55" smashed="yes">
 <attribute name="MPN" value="CC0805KKX7R8BB105" x="27.1" y="12.55" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="25.093" y="12.605" size="0.889" layer="25" font="vector" ratio="11" rot="R270"/>
+<attribute name="NAME" x="28.443" y="13.055" size="0.889" layer="25" font="vector" ratio="11" rot="R270"/>
 </element>
 <element name="U$2" library="synfinatic" package="POLOLU-D24V5FX" value="POLOLU-D24V5F3" x="7" y="33" smashed="yes"/>
 <element name="JP2" library="SparkFun-Connectors" package="1X03" value="" x="7" y="19" smashed="yes">
@@ -706,7 +709,7 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="R4" library="Seeed-OPL-Resistor" package="R0805" value="1k" x="34.9" y="17.5" smashed="yes" rot="R180">
 <attribute name="MPN" value="RC0805FR-0710KL" x="34.9" y="17.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="33.884" y="15.595" size="0.889" layer="25" font="vector" ratio="11" rot="R90"/>
+<attribute name="NAME" x="33.884" y="17.595" size="0.889" layer="25" font="vector" ratio="11" rot="R90"/>
 </element>
 </elements>
 <signals>
@@ -716,7 +719,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="S2" pad="1"/>
 <contactref element="U$3" pad="3"/>
 <contactref element="R6" pad="1"/>
-<contactref element="U$4" pad="P$1"/>
+<contactref element="JP3" pad="1"/>
 <contactref element="C1" pad="1"/>
 <contactref element="U$2" pad="GND"/>
 <polygon width="0.4064" layer="1">
@@ -738,9 +741,9 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="JP1" pad="GND"/>
 <contactref element="C2" pad="1"/>
 <wire x1="21.0675" y1="4.065" x2="23" y2="2.25" width="0.1524" layer="16"/>
-<wire x1="23" y1="2.25" x2="25.75" y2="2.25" width="0.1524" layer="16"/>
-<via x="25.75" y="2.25" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="25.75" y1="2.25" x2="27" y2="6" width="0.1524" layer="1"/>
+<wire x1="23" y1="2.25" x2="26.75" y2="2.25" width="0.1524" layer="16"/>
+<via x="26.75" y="2.25" extent="1-16" drill="0.3302"/>
+<wire x1="26.75" y1="2.25" x2="27" y2="6" width="0.1524" layer="1"/>
 <wire x1="27" y1="6" x2="28.8638" y2="6.0706" width="0.1524" layer="1"/>
 </signal>
 <signal name="3.3V" class="2">
@@ -919,20 +922,20 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="INPUT">
 <contactref element="D2" pad="C1"/>
-<contactref element="U$4" pad="P$3"/>
-<wire x1="31.99" y1="38.37" x2="32.005" y2="38.37" width="0.3048" layer="1"/>
+<contactref element="JP3" pad="3"/>
+<wire x1="31.995" y1="38.37" x2="32.005" y2="38.37" width="0.3048" layer="1"/>
 <wire x1="32.005" y1="38.37" x2="32.005" y2="29.04" width="0.3048" layer="1"/>
 </signal>
 <signal name="OUTPUT">
 <contactref element="U$3" pad="4"/>
 <contactref element="R5" pad="1"/>
-<contactref element="U$4" pad="P$2"/>
+<contactref element="JP3" pad="2"/>
 <wire x1="32.9184" y1="27.7368" x2="41.529" y2="27.7368" width="0.1524" layer="1"/>
 <wire x1="28.7274" y1="27.6606" x2="32.9184" y2="27.6606" width="0.1524" layer="1"/>
 <wire x1="28.575" y1="27.813" x2="28.7274" y2="27.6606" width="0.1524" layer="1"/>
 <wire x1="41.529" y1="27.7368" x2="41.56" y2="27.73" width="0.1524" layer="1"/>
 <wire x1="28.575" y1="27.813" x2="28.465" y2="27.784" width="0.1524" layer="1"/>
-<wire x1="28.49" y1="38.37" x2="28.465" y2="38.37" width="0.3048" layer="1"/>
+<wire x1="28.495" y1="38.37" x2="28.465" y2="38.37" width="0.3048" layer="1"/>
 <wire x1="28.465" y1="38.37" x2="28.465" y2="27.784" width="0.3048" layer="1"/>
 <wire x1="32.9184" y1="27.6606" x2="32.9184" y2="27.7368" width="0.1524" layer="1"/>
 </signal>
@@ -990,16 +993,16 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="51.9684" y1="9.6774" x2="52" y2="9.62" width="1" layer="1"/>
 </signal>
 <signal name="N$6" class="1">
-<contactref element="U$4" pad="P$4"/>
+<contactref element="JP3" pad="4"/>
 <contactref element="D1" pad="A1"/>
 <wire x1="41.8338" y1="38.4048" x2="42.291" y2="38.4048" width="1" layer="1"/>
 <wire x1="41.7576" y1="38.481" x2="41.8338" y2="38.4048" width="1" layer="1"/>
 <wire x1="38.481" y1="38.481" x2="41.7576" y2="38.481" width="1" layer="1"/>
 <wire x1="35.5092" y1="38.4048" x2="35.7378" y2="38.4048" width="1" layer="1"/>
 <wire x1="42.291" y1="38.4048" x2="42.35" y2="38.43" width="1" layer="1"/>
-<wire x1="35.5092" y1="38.4048" x2="35.49" y2="38.37" width="1" layer="1"/>
+<wire x1="35.5092" y1="38.4048" x2="35.495" y2="38.37" width="1" layer="1"/>
 <wire x1="38.481" y1="38.481" x2="35.49" y2="38.481" width="1.016" layer="1"/>
-<wire x1="35.49" y1="38.481" x2="35.49" y2="38.37" width="1.016" layer="1"/>
+<wire x1="35.49" y1="38.481" x2="35.495" y2="38.37" width="1.016" layer="1"/>
 </signal>
 <signal name="5V-TX">
 <contactref element="R6" pad="2"/>
@@ -1015,6 +1018,9 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="7.0104" y1="19.05" x2="7" y2="19" width="0.1524" layer="1"/>
 </signal>
 </signals>
+<errors>
+<approved hash="18,29,3a7b6ba7ed4dba39"/>
+</errors>
 </board>
 </drawing>
 <compatibility>

@@ -1,0 +1,29 @@
+Partlist
+
+Exported from goprocontrol.sch at 1/23/16 4:04 PM
+
+EAGLE Version 7.5.0 Copyright (c) 1988-2015 CadSoft
+
+Assembly variant: 
+
+Part     Value                        Device                                      Package             Library                    Sheet
+
+C1       1uf                          CERAMIC-1UF-25V-10%-X7R(0805)               C0805               Seeed-OPL-Capacitor        1
+C2       .01uf                        CERAMIC-1UF-25V-10%-X7R(0805)               C0805               Seeed-OPL-Capacitor        1
+D1       B5817WS                      SCHOTTKY-DIODE                              SOD-323             synfinatic                 1
+D2       B5817WS                      SCHOTTKY-DIODE                              SOD-323             synfinatic                 1
+D3       B5817WS                      SCHOTTKY-DIODE                              SOD-323             synfinatic                 1
+JP1      FTDI_BASICPTH                FTDI_BASICPTH                               FTDI_BASIC          SparkFun-Connectors        1
+JP2                                   M03PTH                                      1X03                SparkFun-Connectors        1
+JP3      PTSA-1.5/4-3.5FOST-TE-3.5-4P PTSA-1.5/4-3.5FOST-TE-3.5-4P                TERM-4P-3.5         synfinatic                 1
+R1       1k                           SMD-RES-10K-1%-1/8W(0805)                   R0805               Seeed-OPL-Resistor         1
+R2       1k                           SMD-RES-10K-1%-1/8W(0805)                   R0805               Seeed-OPL-Resistor         1
+R4       1k                           SMD-RES-10K-1%-1/8W(0805)                   R0805               Seeed-OPL-Resistor         1
+R5       1k                           SMD-RES-10K-1%-1/8W(0805)                   R0805               Seeed-OPL-Resistor         1
+R6       10K                          SMD-RES-10K-1%-1/8W(0805)                   R0805               Seeed-OPL-Resistor         1
+R7       22K                          SMD-RES-22K-5%-1/8W(0805)                   R0805               Seeed-OPL-Resistor         1
+S1       RESET                        SWITCH-MOMENTARY-2PTH                       TACTILE-PTH         SparkFun-Electromechanical 1
+S2       PROG                         SWITCH-MOMENTARY-2PTH                       TACTILE-PTH         SparkFun-Electromechanical 1
+U$1      ESP01                        ESP01                                       ESP01               esp8266modules             1
+U$2      POLOLU-D24V5F3               POLOLU-D24V5FD24V5F                         POLOLU-D24V5FX      synfinatic                 1
+U$3      LTV-816S                     SMD-PHOTOCOUPLER-5KV-LTV-816S(4P-4.6X6.5MM) SMD4-2.54-4.6X6.5MM Seeed-OPL-Transistor       1

@@ -8,24 +8,24 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -34,8 +34,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -43,17 +43,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -277,21 +277,6 @@
 <text x="-1.8" y="0.9" size="0.8128" layer="25" font="vector">&gt;NAME</text>
 <text x="-2.1" y="-1.7" size="0.8128" layer="27" font="vector">&gt;VALUE</text>
 </package>
-<package name="4-3.5IP">
-<pad name="P$1" x="0" y="0" drill="0.8" shape="square"/>
-<pad name="P$2" x="3.5" y="0" drill="0.8"/>
-<pad name="P$3" x="7" y="0" drill="0.8"/>
-<pad name="P$4" x="10.5" y="0" drill="0.8"/>
-<wire x1="12.75" y1="7.3" x2="-1.8" y2="7.3" width="0.127" layer="21"/>
-<wire x1="-1.8" y1="7.3" x2="-2.75" y2="7.3" width="0.127" layer="21"/>
-<wire x1="-2.75" y1="7.3" x2="-2.75" y2="-4.7" width="0.127" layer="21"/>
-<wire x1="-2.75" y1="-4.7" x2="12.75" y2="-4.7" width="0.127" layer="21"/>
-<wire x1="12.75" y1="-4.7" x2="12.75" y2="4.9" width="0.127" layer="21"/>
-<wire x1="12.75" y1="4.95" x2="12.75" y2="7.3" width="0.127" layer="21"/>
-<wire x1="-1.8" y1="7.3" x2="-1.8" y2="-4.75" width="0.127" layer="21"/>
-<wire x1="-1.75" y1="4.95" x2="12.75" y2="4.95" width="0.127" layer="21"/>
-<wire x1="12.75" y1="4.95" x2="12.75" y2="4.9" width="0.127" layer="21"/>
-</package>
 <package name="4-3.5IP-2">
 <pad name="P$1" x="0" y="0" drill="1.016" diameter="1.8796" shape="square"/>
 <pad name="P$2" x="3.5" y="0" drill="1.016" diameter="1.8796"/>
@@ -341,6 +326,27 @@
 <pad name="VOUT" x="8.89" y="1.27" drill="1.016" diameter="1.8796"/>
 <text x="1.27" y="10.795" size="1.27" layer="25">&gt;Name</text>
 <text x="1.27" y="7.62" size="1.27" layer="27">&gt;Value</text>
+</package>
+<package name="TERM-4P-3.5">
+<wire x1="-1.745" y1="3.5" x2="12.255" y2="3.5" width="0.127" layer="21"/>
+<wire x1="12.255" y1="3.5" x2="12.255" y2="2.1" width="0.127" layer="21"/>
+<wire x1="12.255" y1="2.1" x2="12.255" y2="-2.1" width="0.127" layer="21"/>
+<wire x1="12.255" y1="-2.1" x2="12.255" y2="-3.5" width="0.127" layer="21"/>
+<wire x1="12.255" y1="-3.5" x2="-1.745" y2="-3.5" width="0.127" layer="21"/>
+<wire x1="-1.745" y1="-3.5" x2="-1.745" y2="-2.1" width="0.127" layer="21"/>
+<wire x1="-1.745" y1="-2.1" x2="-1.745" y2="2.1" width="0.127" layer="21"/>
+<wire x1="-1.745" y1="2.1" x2="-1.745" y2="3.5" width="0.127" layer="21"/>
+<wire x1="-1.745" y1="-2.1" x2="12.255" y2="-2.1" width="0.127" layer="21"/>
+<circle x="0.025" y="0" radius="1.5" width="0.127" layer="21"/>
+<circle x="3.485" y="0" radius="1.5" width="0.127" layer="21"/>
+<pad name="1" x="0.005" y="0" drill="1" diameter="1.85" shape="square"/>
+<pad name="2" x="3.505" y="0" drill="1" diameter="1.85"/>
+<text x="2.85" y="3.81" size="0.889" layer="25" ratio="11">&gt;name</text>
+<text x="2.75" y="-4.445" size="0.889" layer="27" ratio="11">&gt;value</text>
+<pad name="3" x="7.005" y="0" drill="1" diameter="1.85"/>
+<pad name="4" x="10.505" y="0" drill="1" diameter="1.85"/>
+<circle x="6.985" y="0" radius="1.5" width="0.127" layer="21"/>
+<circle x="10.485" y="0" radius="1.5" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -423,7 +429,7 @@ http://www.digikey.com/product-detail/en/1984989/277-6404-ND/2513979</descriptio
 <gate name="G$1" symbol="4IP" x="2.54" y="2.54"/>
 </gates>
 <devices>
-<device name="" package="4-3.5IP">
+<device name="4-3.5IP-2" package="4-3.5IP-2">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
@@ -434,12 +440,12 @@ http://www.digikey.com/product-detail/en/1984989/277-6404-ND/2513979</descriptio
 <technology name=""/>
 </technologies>
 </device>
-<device name="4-3.5IP-2" package="4-3.5IP-2">
+<device name="OST-TE-3.5-4P" package="TERM-4P-3.5">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-<connect gate="G$1" pin="P$3" pad="P$3"/>
-<connect gate="G$1" pin="P$4" pad="P$4"/>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+<connect gate="G$1" pin="P$3" pad="3"/>
+<connect gate="G$1" pin="P$4" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1608,17 +1614,17 @@ Matches 4UCONN part # 11026&lt;br&gt;
 <pad name="VCC" x="7.62" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="CTS" x="10.16" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="GND" x="12.7" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<text x="1.1938" y="-2.6162" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="3.175" y="2.54" size="1.27" layer="27">&gt;VALUE</text>
-<text x="-0.635" y="4.445" size="0.762" layer="51" rot="R270">GRN</text>
-<text x="12.065" y="4.445" size="0.762" layer="51" rot="R270">BLK</text>
+<text x="1.8288" y="-2.6162" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="1.905" y="3.175" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="3.175" size="0.762" layer="21">GRN</text>
+<text x="11.43" y="3.175" size="0.762" layer="21">BLK</text>
 <rectangle x1="12.446" y1="-0.254" x2="12.954" y2="0.254" layer="51"/>
 <rectangle x1="9.906" y1="-0.254" x2="10.414" y2="0.254" layer="51"/>
 <rectangle x1="7.366" y1="-0.254" x2="7.874" y2="0.254" layer="51"/>
 <rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-<text x="-1.27" y="1.27" size="0.7112" layer="51" distance="45">DTR RXI TXO VCC CTS GND</text>
+<text x="-1.27" y="1.905" size="0.7112" layer="21" distance="45">DTR RXI TXO VCC CTS GND</text>
 </package>
 </packages>
 <symbols>
@@ -2024,7 +2030,7 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="U$3" library="Seeed-OPL-Transistor" deviceset="SMD-PHOTOCOUPLER-5KV-LTV-816S(4P-4.6X6.5MM)" device="" value="LTV-816S"/>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
 <part name="R5" library="Seeed-OPL-Resistor" deviceset="SMD-RES-10K-1%-1/8W(0805)" device="" value="1k"/>
-<part name="U$4" library="synfinatic" deviceset="PTSA-1.5/4-3.5F" device="4-3.5IP-2" value="PTSA-1.5/4-3.5F4-3.5IP-2"/>
+<part name="JP3" library="synfinatic" deviceset="PTSA-1.5/4-3.5F" device="OST-TE-3.5-4P" value="PTSA-1.5/4-3.5FOST-TE-3.5-4P"/>
 <part name="R6" library="Seeed-OPL-Resistor" deviceset="SMD-RES-10K-1%-1/8W(0805)" device="" value="10K"/>
 <part name="R7" library="Seeed-OPL-Resistor" deviceset="SMD-RES-22K-5%-1/8W(0805)" device="" value="22K"/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
@@ -2062,7 +2068,7 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="U$3" gate="G$1" x="25.4" y="-27.94" rot="R270"/>
 <instance part="GND4" gate="1" x="40.64" y="-38.1"/>
 <instance part="R5" gate="G$1" x="40.64" y="-3.81" rot="R90"/>
-<instance part="U$4" gate="G$1" x="-40.64" y="27.94" rot="R180"/>
+<instance part="JP3" gate="G$1" x="-40.64" y="27.94" rot="R180"/>
 <instance part="R6" gate="G$1" x="91.44" y="33.02"/>
 <instance part="R7" gate="G$1" x="104.14" y="33.02"/>
 <instance part="GND5" gate="1" x="85.852" y="29.21"/>
@@ -2122,7 +2128,7 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="P$1"/>
+<pinref part="JP3" gate="G$1" pin="P$1"/>
 <wire x1="-33.02" y1="20.32" x2="-25.4" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="20.32" x2="-25.4" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
@@ -2271,14 +2277,14 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <wire x1="-33.02" y1="30.48" x2="-12.7" y2="30.48" width="0.1524" layer="91"/>
 <label x="-18.034" y="30.988" size="1.778" layer="95"/>
-<pinref part="U$4" gate="G$1" pin="P$3"/>
+<pinref part="JP3" gate="G$1" pin="P$3"/>
 </segment>
 </net>
 <net name="OUTPUT" class="0">
 <segment>
 <wire x1="-33.02" y1="25.4" x2="-12.7" y2="25.4" width="0.1524" layer="91"/>
 <label x="-20.32" y="25.4" size="1.778" layer="95"/>
-<pinref part="U$4" gate="G$1" pin="P$2"/>
+<pinref part="JP3" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="COLLECTOR"/>
@@ -2323,7 +2329,7 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <wire x1="-33.02" y1="35.56" x2="-20.32" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="35.56" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="P$4"/>
+<pinref part="JP3" gate="G$1" pin="P$4"/>
 <pinref part="D1" gate="D$1" pin="A"/>
 </segment>
 </net>
@@ -2347,9 +2353,12 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <approved hash="104,1,137.16,-30.48,U$2,VOUT,3.3V,,,"/>
 <approved hash="202,1,121.92,-38.1,U$2,SHDN,,,,"/>
 <approved hash="206,1,-20.32,45.72,+12V,,,,,"/>
+<approved hash="206,1,119.38,55.88,+12V,,,,,"/>
 <approved hash="208,1,91.44,-12.7,+12V,sup,,,,"/>
 <approved hash="208,1,-20.32,45.72,+12V,out,,,,"/>
 <approved hash="208,1,-20.32,50.8,+12V,sup,,,,"/>
+<approved hash="208,1,119.38,55.88,+12V,out,,,,"/>
+<approved hash="208,1,119.38,60.96,+12V,sup,,,,"/>
 <approved hash="113,1,82.7447,51.4773,JP2,,,,,"/>
 </errors>
 </schematic>
