@@ -1,10 +1,14 @@
 #ifndef __GOPROCONTROL_H__
 #define __GOPROCONTROL_H__
 
-#define GOPRO_ON "http://10.5.5.9/bacpac/PW?t=%s&p=\%01 HTTP/1.1\r\n"
-#define GOPRO_OFF "http://10.5.5.9/bacpac/PW?t=%s&p=\%00 HTTP/1.1\r\n"
-#define GOPRO_RECORD "http://10.5.5.9/bacpac/SH?t=%s&p=\%01 HTTP/1.1\r\n"
-#define GOPRO_STOP "http://10.5.5.9/bacpac/SH?t=%s&p=\%00 HTTP/1.1\r\n"
+#define GPIO 2 // GPIO2
+#define HTTP_CODE_OK 200
+#define GOPRO_HOST "10.5.5.9"
+#define GOPRO_PORT 80
+#define GOPRO_ON     "/bacpac/PW?t=%s&p=%%01"
+#define GOPRO_OFF    "/bacpac/PW?t=%s&p=%%00"
+#define GOPRO_RECORD "/bacpac/SH?t=%s&p=%%01"
+#define GOPRO_STOP   "/bacpac/SH?t=%s&p=%%00"
 
 
 #endif

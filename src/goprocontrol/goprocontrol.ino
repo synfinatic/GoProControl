@@ -8,32 +8,33 @@
  *  - Arduino IDE v1.6.5+ (http://www.arduino.cc)
  *  - ESP8266 for Arduino (https://github.com/esp8266/Arduino) 
  */
+#define SERIAL_SPEED 115200        // Set this to match your ESP8266 serial speed
+#define GOPRO_DEBUG_WIFI 0         // Enable (1) or disable (0) debugging
+#define SSID_NAME "ADTGoProBlack"  // SSID of your GoPro
+#define WIFI_PASSWORD "falcon123"  // WiFi Password
+
+
 #include <Arduino.h>
-#include "goprocontrol.h"
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
 #include <ESP8266HTTPClient.h>
+#include "goprocontrol.h"
 
 #define USE_SERIAL Serial
 
 ESP8266WiFiMulti WiFiMulti;
-HTTPClient http;
 
-#define GPIO 2 // GPIO2
-#define SERIAL_SPEED 115200
-#define DEBUG_WIFI 1
-#define SSID "GoPro-SSID" // SSID of your GoPro
-#define WIFI_PASSWORD "happyclam"
-#define HTTP_CODE_OK 200
 
 typedef enum {
     START,
     STOP,
-    NO_CHANGE
+    NO_CHANGE,
+    NONE
 } Recording;
 
 Recording recording = NO_CHANGE;
+Recording last_mode = NONE;
 
 /*
  * Send a HTTP request up to <retries> times with a <delay_ms> delay.
@@ -41,28 +42,31 @@ Recording recording = NO_CHANGE;
  * every 10 times
  */
 bool
-send_request(const char request_fmt[], int retries = 5, int delay_ms = 100) {
-    int httpCode;
-    char request_str[100];
-    int times = 0;
+send_request(const char *request_fmt, int retries = 5, int delay_ms = 100) {
+    int httpCode, status;
+    char request_str[45];
+    unsigned int times = 0;
+    HTTPClient http;
 
-    sprintf(request_str, request_fmt, WIFI_PASSWORD);
+    snprintf(request_str, 44, request_fmt, WIFI_PASSWORD);
+    USE_SERIAL.printf("Sending: %s\n", request_str);
 
     while (((times < retries) && retries > 0) || (retries < 0)) {
-        if ((WiFiMulti.run() == WL_CONNECTED)) {
-            http.begin(request_str);
+        status = WiFiMulti.run();
+        if ((status == WL_CONNECTED)) {
+            http.begin(GOPRO_HOST, GOPRO_PORT, request_str);
             httpCode = http.GET();
             if (httpCode == HTTP_CODE_OK) {
                 http.end();
+                USE_SERIAL.printf("OK\n");
                 return true;
             } else if (times % 10 == 0) {
-                USE_SERIAL.printf("HTTP GET failed with: %d", httpCode);
+                USE_SERIAL.printf("[%u] HTTP GET failed with: %d\n", times, httpCode);
             }
         } else if (times % 10 == 0) {
-            USE_SERIAL.printf("Not connected to GoPro WiFi\n");
+            USE_SERIAL.printf("Not connected to GoPro WiFi: %d\n", status);
         }
-        if (retries > 0)
-            times ++;
+        times ++;
         delay(delay_ms);
     }
 
@@ -83,9 +87,13 @@ start_stop_recording() {
 
 void 
 setup() {
+    int status;
+
     pinMode(GPIO, INPUT);
-    USE_SERIAL.begin(115200);
-#ifdef DEBUG_WIFI
+    attachInterrupt(GPIO, start_stop_recording, CHANGE);
+
+    USE_SERIAL.begin(SERIAL_SPEED);
+#ifdef GOPRO_DEBUG_WIFI
     USE_SERIAL.setDebugOutput(true);
 #endif
 
@@ -99,12 +107,16 @@ setup() {
         delay(1000);
     }
 
-    USE_SERIAL.printf("Connecting to %s\n", SSID);
-    WiFiMulti.addAP(SSID, WIFI_PASSWORD);
-    USE_SERIAL.printf("Connected!\n");
-    http.setReuse(true);         // Reuse HTTPClient if possible
-    send_request(GOPRO_ON, -1);  // Blocks until we turn on the GoPro
-    attachInterrupt(GPIO, start_stop_recording, CHANGE);
+    USE_SERIAL.printf("Connecting to %s\n", SSID_NAME);
+    WiFiMulti.addAP(SSID_NAME, WIFI_PASSWORD);
+    status = WiFiMulti.run();
+    if (status == WL_CONNECTED) {
+        USE_SERIAL.printf("Connected!\n");
+    } else {
+        USE_SERIAL.printf("Not connected: %d\n", status);
+    }
+    WiFiMulti.run();
+    send_request(GOPRO_ON, -1, 1000);  // Blocks until we turn on the GoPro
 }
 
 
@@ -113,6 +125,11 @@ setup() {
  */
 void
 loop() {
+    if (recording != last_mode) {
+        USE_SERIAL.printf("Changing modes %u -> %u\n", last_mode, recording);
+        last_mode = recording;
+    }
+
     if (recording == START) {
         USE_SERIAL.printf("Starting recording...\n");
         if (send_request(GOPRO_RECORD)) {

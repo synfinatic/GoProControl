@@ -50,6 +50,25 @@ The GoProControl board has an onboard connector for programming via a FTDI
 cable.  This cable should provide 5V of power and can use either 3.3V or 
 5V for signalling.
 
+Configure your GoPro WiFi for "App Mode" and define a SSID and WiFi Password.
+
+Before programming your GoProController, you first need to edit 
+**src/goprocontrol/goprocontrol.ino** and edit the SSID and WIFI_PASSWORD
+to match your GoPro's settings.
+
+In order to program your GoProController, you will need to start the Arduino
+application and figure out what serial speed (baud) your ESP8266 communicates
+at.  Older boards run at 9600, while newer boards seem to run at 115200.  
+
+Once you have figured out the serial speed, configure Arduino for a 
+"Generic ESP8266 Module" and the upload speed to the same speed.  Then, 
+with the board powered up:
+
+ 1. Press and hold the PROG button
+ 2. Press and release the RST button
+ 3. Release the PROG button
+ 4. Uplaod the sketch via the Arduino application
+
 ## Links Links to projects or information that was critical to me creating this
 project.  Thank you!
 
