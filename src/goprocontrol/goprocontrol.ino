@@ -24,7 +24,7 @@
 #define USE_SERIAL Serial
 
 ESP8266WiFiMulti WiFiMulti;
-
+char request_str[45];
 
 typedef enum {
     START,
@@ -44,7 +44,6 @@ Recording last_mode = NONE;
 bool
 send_request(const char *request_fmt, int retries = 5, int delay_ms = 100) {
     int httpCode, status;
-    char request_str[45];
     unsigned int times = 0;
     HTTPClient http;
 
@@ -52,19 +51,28 @@ send_request(const char *request_fmt, int retries = 5, int delay_ms = 100) {
     USE_SERIAL.printf("Sending: %s\n", request_str);
 
     while (((times < retries) && retries > 0) || (retries < 0)) {
+        USE_SERIAL.printf("Trying run()\n");
+        USE_SERIAL.flush();
         status = WiFiMulti.run();
         if ((status == WL_CONNECTED)) {
+            USE_SERIAL.printf("Trying begin()\n");
+            USE_SERIAL.flush();
             http.begin(GOPRO_HOST, GOPRO_PORT, request_str);
+            USE_SERIAL.printf("Trying GET()\n");
+            USE_SERIAL.flush();
             httpCode = http.GET();
             if (httpCode == HTTP_CODE_OK) {
                 http.end();
                 USE_SERIAL.printf("OK\n");
+                USE_SERIAL.flush();
                 return true;
             } else if (times % 10 == 0) {
                 USE_SERIAL.printf("[%u] HTTP GET failed with: %d\n", times, httpCode);
+                USE_SERIAL.flush();
             }
         } else if (times % 10 == 0) {
             USE_SERIAL.printf("Not connected to GoPro WiFi: %d\n", status);
+            USE_SERIAL.flush();
         }
         times ++;
         delay(delay_ms);
@@ -72,17 +80,8 @@ send_request(const char *request_fmt, int retries = 5, int delay_ms = 100) {
 
     http.end();
     USE_SERIAL.printf("Failed %d times to send request: %s", retries, request_fmt);
+    USE_SERIAL.flush();
     return false;
-}
-
-void
-start_stop_recording() {
-    if (digitalRead(GPIO) == HIGH) {
-        recording = STOP;
-    } else {
-        // we record when it goes low!
-        recording = START;
-    }
 }
 
 void 
@@ -90,7 +89,6 @@ setup() {
     int status;
 
     pinMode(GPIO, INPUT);
-    attachInterrupt(GPIO, start_stop_recording, CHANGE);
 
     USE_SERIAL.begin(SERIAL_SPEED);
 #ifdef GOPRO_DEBUG_WIFI
@@ -125,20 +123,27 @@ setup() {
  */
 void
 loop() {
+    if (digitalRead(GPIO) == HIGH) {
+        recording = STOP;
+    } else {
+        // we record when it goes low!
+        recording = START;
+    }
+
     if (recording != last_mode) {
         USE_SERIAL.printf("Changing modes %u -> %u\n", last_mode, recording);
         last_mode = recording;
-    }
 
-    if (recording == START) {
-        USE_SERIAL.printf("Starting recording...\n");
-        if (send_request(GOPRO_RECORD)) {
-            recording = NO_CHANGE;
-        }
-    } else if (recording == STOP) {
-        USE_SERIAL.printf("Stopping recording...\n");
-        if (send_request(GOPRO_STOP)) {
-            recording = NO_CHANGE;
+        if (recording == START) {
+            USE_SERIAL.printf("Starting recording...\n");
+            if (send_request(GOPRO_RECORD)) {
+                recording = NO_CHANGE;
+            }
+        } else if (recording == STOP) {
+            USE_SERIAL.printf("Stopping recording...\n");
+            if (send_request(GOPRO_STOP)) {
+                recording = NO_CHANGE;
+            }
         }
     }
 }
