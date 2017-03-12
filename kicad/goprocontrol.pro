@@ -1,4 +1,4 @@
-update=Saturday, February 25, 2017 'PMt' 06:34:19 PM
+update=Saturday, March 11, 2017 'PMt' 07:50:37 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -31,6 +31,18 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.127
 BoardOutlineThickness=0.127
 ModuleOutlineThickness=0.127
+[general]
+version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=/Users/aturner/KiCad/libs/kicad-ESP8266;/Users/aturner/KiCad/libs/kicad-synfinatic;/Users/aturner/KiCad/libs/kicad_teensy
@@ -69,5 +81,3 @@ LibName31=ESP8266
 LibName32=dc-dc
 LibName33=switches
 LibName34=synfinatic
-[general]
-version=1

@@ -2,14 +2,14 @@
 <export version="D">
   <design>
     <source>/Users/aturner/GIT/gopro-control/kicad/goprocontrol.sch</source>
-    <date>Saturday, February 25, 2017 'AMt' 11:38:22 AM</date>
+    <date>Saturday, March 11, 2017 'PMt' 07:09:48 PM</date>
     <tool>Eeschema 4.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>GoProControl with Adjustable Delay Timer</title>
         <company>Aaron Turner &lt;synfinatic@gmail.com&gt;</company>
         <rev>v2.0</rev>
-        <date>2017-02-25</date>
+        <date>2017-03-05</date>
         <source>goprocontrol.sch</source>
         <comment number="1" value="https://synfin.net/goprocontrol"/>
         <comment number="2" value="Advanced GoProControl"/>
@@ -21,36 +21,42 @@
   <components>
     <comp ref="P1">
       <value>CONN_01X06</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Pheonix_PT-3.5mm_6pol</footprint>
       <libsource lib="conn" part="CONN_01X06"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58AFCDEF</tstamp>
     </comp>
     <comp ref="U2">
       <value>ESP-01v090</value>
+      <footprint>ESP8266:ESP-01</footprint>
       <libsource lib="ESP8266" part="ESP-01v090"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B1086D</tstamp>
     </comp>
     <comp ref="SW2">
       <value>Prog</value>
+      <footprint>synfinatic:SPST-SMD-6x3.5</footprint>
       <libsource lib="switches" part="SW_Push"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B108B4</tstamp>
     </comp>
     <comp ref="SW1">
       <value>Reset</value>
+      <footprint>synfinatic:SPST-SMD-6x3.5</footprint>
       <libsource lib="switches" part="SW_Push"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B108E0</tstamp>
     </comp>
     <comp ref="R2">
       <value>1k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B10910</tstamp>
     </comp>
     <comp ref="R1">
       <value>1k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B1093E</tstamp>
@@ -64,12 +70,14 @@
     </comp>
     <comp ref="U3">
       <value>D24V5F3</value>
+      <footprint>synfinatic:D24V5Fx</footprint>
       <libsource lib="synfinatic" part="D24V5Fx"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B11469</tstamp>
     </comp>
     <comp ref="R13">
       <value>1k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B11822</tstamp>
@@ -221,48 +229,33 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B125EF</tstamp>
     </comp>
-    <comp ref="CONN1">
+    <comp ref="FTDIProg1">
       <value>FTDI</value>
       <footprint>synfinatic:FTDIHeader</footprint>
       <libsource lib="synfinatic" part="FTDI"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B1360F</tstamp>
     </comp>
-    <comp ref="JP1">
-      <value>Jumper_NC_Dual</value>
-      <libsource lib="device" part="Jumper_NC_Dual"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58B13CFF</tstamp>
-    </comp>
-    <comp ref="R5">
-      <value>22k</value>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58B13EA9</tstamp>
-    </comp>
-    <comp ref="R4">
-      <value>10k</value>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58B13F94</tstamp>
-    </comp>
-    <comp ref="D1">
-      <value>B5817WS</value>
-      <libsource lib="device" part="D_Schottky"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58B1DCF1</tstamp>
-    </comp>
     <comp ref="D3">
       <value>B5817WS</value>
+      <footprint>Diodes_SMD:SOD-323_HandSoldering</footprint>
       <libsource lib="device" part="D_Schottky"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B1DFA9</tstamp>
     </comp>
     <comp ref="D4">
       <value>B5817WS</value>
+      <footprint>Diodes_SMD:SOD-323_HandSoldering</footprint>
       <libsource lib="device" part="D_Schottky"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58B1E2F2</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>CONN_01X02</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C4B46B</tstamp>
     </comp>
   </components>
   <libparts>
@@ -282,6 +275,23 @@
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <description>Connector, single row, 01x02</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="conn" part="CONN_01X06">
@@ -418,18 +428,6 @@
         <pin num="6" name="GND" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="Jumper_NC_Dual">
-      <description>Dual Jumper, normally closed</description>
-      <fields>
-        <field name="Reference">JP</field>
-        <field name="Value">Jumper_NC_Dual</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="linear" part="LM555N">
       <aliases>
         <alias>NE555</alias>
@@ -542,23 +540,23 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="transistors">
-      <uri>/Library/Application Support/kicad/library/transistors.lib</uri>
+    <library logical="linear">
+      <uri>/Library/Application Support/kicad/library/linear.lib</uri>
     </library>
     <library logical="device">
       <uri>/Library/Application Support/kicad/library/device.lib</uri>
     </library>
+    <library logical="transistors">
+      <uri>/Library/Application Support/kicad/library/transistors.lib</uri>
+    </library>
     <library logical="conn">
       <uri>/Library/Application Support/kicad/library/conn.lib</uri>
     </library>
-    <library logical="linear">
-      <uri>/Library/Application Support/kicad/library/linear.lib</uri>
+    <library logical="switches">
+      <uri>/Library/Application Support/kicad/library/switches.lib</uri>
     </library>
     <library logical="ESP8266">
       <uri>/Users/aturner/KiCad/libs/kicad-ESP8266/ESP8266.lib</uri>
-    </library>
-    <library logical="switches">
-      <uri>/Library/Application Support/kicad/library/switches.lib</uri>
     </library>
     <library logical="synfinatic">
       <uri>/Users/aturner/KiCad/libs/kicad-synfinatic/synfinatic.lib</uri>
@@ -566,171 +564,160 @@
   </libraries>
   <nets>
     <net code="1" name="Net-(C1-Pad1)">
-      <node ref="U1" pin="5"/>
       <node ref="C1" pin="1"/>
+      <node ref="U1" pin="5"/>
     </net>
     <net code="2" name="Net-(C3-Pad1)">
-      <node ref="U1" pin="2"/>
-      <node ref="C3" pin="1"/>
       <node ref="R3" pin="2"/>
+      <node ref="C3" pin="1"/>
+      <node ref="U1" pin="2"/>
     </net>
-    <net code="3" name="Net-(Q4-Pad1)">
-      <node ref="Q4" pin="1"/>
+    <net code="3" name="LoggerTrigger">
+      <node ref="P1" pin="3"/>
+      <node ref="D4" pin="1"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="C5" pin="2"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="FTDIProg1" pin="6"/>
+      <node ref="U1" pin="1"/>
+      <node ref="R8" pin="2"/>
+      <node ref="U2" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="SW2" pin="2"/>
+      <node ref="U3" pin="3"/>
+      <node ref="C3" pin="2"/>
+    </net>
+    <net code="5" name="VCC">
+      <node ref="U1" pin="4"/>
+      <node ref="R3" pin="1"/>
+      <node ref="RV1" pin="3"/>
+      <node ref="U1" pin="8"/>
+      <node ref="ROpt1" pin="1"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="6" name="Net-(Q1-Pad1)">
+      <node ref="R6" pin="2"/>
+      <node ref="Q1" pin="1"/>
+    </net>
+    <net code="7" name="RXD">
+      <node ref="U2" pin="8"/>
+      <node ref="FTDIProg1" pin="3"/>
+    </net>
+    <net code="8" name="GPIO2">
+      <node ref="U2" pin="4"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="9" name="Net-(R1-Pad1)">
+      <node ref="R1" pin="1"/>
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="10" name="Net-(SW2-Pad1)">
+      <node ref="U2" pin="6"/>
+      <node ref="SW2" pin="1"/>
+    </net>
+    <net code="11" name="Net-(D4-Pad2)">
+      <node ref="R13" pin="2"/>
+      <node ref="D4" pin="2"/>
+    </net>
+    <net code="12" name="12VOut">
+      <node ref="U3" pin="2"/>
+      <node ref="Q5" pin="2"/>
+      <node ref="P1" pin="4"/>
+    </net>
+    <net code="13" name="Net-(R2-Pad1)">
+      <node ref="U2" pin="5"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="14" name="TXD">
+      <node ref="U2" pin="1"/>
+      <node ref="FTDIProg1" pin="2"/>
+    </net>
+    <net code="15" name="Net-(Q3-Pad1)">
+      <node ref="R9" pin="1"/>
+      <node ref="Q3" pin="1"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="16" name="+3V3">
+      <node ref="C2" pin="1"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="P2" pin="1"/>
+      <node ref="U2" pin="7"/>
+      <node ref="R13" pin="1"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="17" name="Net-(FTDIProg1-Pad4)">
+      <node ref="P2" pin="2"/>
+      <node ref="FTDIProg1" pin="4"/>
+    </net>
+    <net code="18" name="+12V">
+      <node ref="Q3" pin="2"/>
+      <node ref="D3" pin="1"/>
+      <node ref="R11" pin="1"/>
+      <node ref="Q5" pin="3"/>
+      <node ref="Q4" pin="2"/>
+    </net>
+    <net code="19" name="Net-(R7-Pad2)">
+      <node ref="R7" pin="2"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="20" name="Net-(Q2-Pad1)">
+      <node ref="Q2" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="21" name="Net-(Q4-Pad1)">
       <node ref="R10" pin="1"/>
+      <node ref="Q4" pin="1"/>
     </net>
-    <net code="4" name="Net-(Q2-Pad3)">
+    <net code="22" name="Net-(Q2-Pad3)">
       <node ref="Q2" pin="3"/>
       <node ref="R10" pin="2"/>
       <node ref="R9" pin="2"/>
     </net>
-    <net code="5" name="Net-(Q1-Pad1)">
-      <node ref="R6" pin="2"/>
-      <node ref="Q1" pin="1"/>
-    </net>
-    <net code="6" name="TXD">
-      <node ref="CONN1" pin="2"/>
-      <node ref="U2" pin="1"/>
-    </net>
-    <net code="7" name="RXD">
-      <node ref="U2" pin="8"/>
-      <node ref="JP1" pin="2"/>
-    </net>
-    <net code="8" name="Net-(R1-Pad1)">
-      <node ref="R1" pin="1"/>
-      <node ref="U2" pin="3"/>
-    </net>
-    <net code="9" name="Net-(SW2-Pad1)">
-      <node ref="SW2" pin="1"/>
-      <node ref="U2" pin="6"/>
-    </net>
-    <net code="10" name="LoggerTrigger">
-      <node ref="D4" pin="1"/>
-      <node ref="P1" pin="4"/>
-    </net>
-    <net code="11" name="GND">
-      <node ref="Q2" pin="2"/>
-      <node ref="C1" pin="2"/>
-      <node ref="C4" pin="2"/>
-      <node ref="R4" pin="2"/>
-      <node ref="U3" pin="3"/>
-      <node ref="C2" pin="2"/>
-      <node ref="U1" pin="1"/>
-      <node ref="C3" pin="2"/>
-      <node ref="U2" pin="2"/>
-      <node ref="R12" pin="2"/>
-      <node ref="R8" pin="2"/>
-      <node ref="P1" pin="6"/>
+    <net code="23" name="Net-(C4-Pad1)">
       <node ref="Q1" pin="3"/>
-      <node ref="CONN1" pin="6"/>
-      <node ref="C5" pin="2"/>
-      <node ref="SW1" pin="2"/>
-      <node ref="SW2" pin="2"/>
-    </net>
-    <net code="12" name="Net-(D4-Pad2)">
-      <node ref="R13" pin="2"/>
-      <node ref="D4" pin="2"/>
-    </net>
-    <net code="13" name="+3V3">
-      <node ref="R13" pin="1"/>
-      <node ref="U3" pin="4"/>
-      <node ref="U2" pin="7"/>
-      <node ref="R2" pin="2"/>
-      <node ref="R1" pin="2"/>
-      <node ref="C2" pin="1"/>
-    </net>
-    <net code="14" name="12VOut">
-      <node ref="U3" pin="2"/>
-      <node ref="P1" pin="3"/>
-      <node ref="Q5" pin="2"/>
-    </net>
-    <net code="15" name="Net-(R2-Pad1)">
-      <node ref="SW1" pin="1"/>
-      <node ref="R2" pin="1"/>
-      <node ref="U2" pin="5"/>
-    </net>
-    <net code="16" name="Net-(JP1-Pad3)">
-      <node ref="JP1" pin="3"/>
-      <node ref="R5" pin="2"/>
-      <node ref="R4" pin="1"/>
-    </net>
-    <net code="17" name="Net-(CONN1-Pad3)">
-      <node ref="R5" pin="1"/>
-      <node ref="JP1" pin="1"/>
-      <node ref="CONN1" pin="3"/>
-    </net>
-    <net code="18" name="Net-(CONN1-Pad4)">
-      <node ref="D1" pin="2"/>
-      <node ref="CONN1" pin="4"/>
-    </net>
-    <net code="19" name="+12V">
-      <node ref="D1" pin="1"/>
-      <node ref="D3" pin="1"/>
-      <node ref="Q3" pin="2"/>
-      <node ref="Q4" pin="3"/>
-      <node ref="R11" pin="1"/>
-      <node ref="Q5" pin="3"/>
-    </net>
-    <net code="20" name="Net-(P1-Pad5)">
-      <node ref="P1" pin="5"/>
-    </net>
-    <net code="21" name="Net-(Q4-Pad2)">
-      <node ref="Q5" pin="1"/>
-      <node ref="R12" pin="1"/>
-      <node ref="Q4" pin="2"/>
-    </net>
-    <net code="22" name="Net-(R7-Pad2)">
-      <node ref="U1" pin="3"/>
-      <node ref="R7" pin="2"/>
-    </net>
-    <net code="23" name="Net-(Q2-Pad1)">
-      <node ref="R7" pin="1"/>
-      <node ref="R8" pin="1"/>
-      <node ref="Q2" pin="1"/>
-    </net>
-    <net code="24" name="Net-(Q3-Pad1)">
-      <node ref="R9" pin="1"/>
-      <node ref="R11" pin="2"/>
-      <node ref="Q3" pin="1"/>
-    </net>
-    <net code="25" name="VCC">
-      <node ref="Q3" pin="3"/>
-      <node ref="RV1" pin="3"/>
-      <node ref="U1" pin="8"/>
-      <node ref="U1" pin="4"/>
-      <node ref="R3" pin="1"/>
-      <node ref="D2" pin="1"/>
-      <node ref="ROpt1" pin="1"/>
-    </net>
-    <net code="26" name="Net-(C4-Pad1)">
       <node ref="C4" pin="1"/>
+      <node ref="ROpt1" pin="2"/>
+      <node ref="U1" pin="6"/>
       <node ref="U1" pin="7"/>
       <node ref="RV1" pin="1"/>
       <node ref="RV1" pin="2"/>
-      <node ref="Q1" pin="2"/>
-      <node ref="U1" pin="6"/>
-      <node ref="ROpt1" pin="2"/>
     </net>
-    <net code="27" name="GPIO2">
-      <node ref="C5" pin="1"/>
-      <node ref="U2" pin="4"/>
+    <net code="24" name="Net-(Q4-Pad3)">
+      <node ref="R12" pin="1"/>
+      <node ref="Q5" pin="1"/>
+      <node ref="Q4" pin="3"/>
     </net>
-    <net code="28" name="Net-(U3-Pad1)">
+    <net code="25" name="Net-(U3-Pad1)">
       <node ref="U3" pin="1"/>
     </net>
-    <net code="29" name="Net-(D3-Pad2)">
-      <node ref="P1" pin="1"/>
+    <net code="26" name="Net-(D3-Pad2)">
       <node ref="D3" pin="2"/>
+      <node ref="P1" pin="6"/>
     </net>
-    <net code="30" name="Switched12V">
-      <node ref="R6" pin="1"/>
-      <node ref="D2" pin="2"/>
+    <net code="27" name="Net-(P1-Pad2)">
       <node ref="P1" pin="2"/>
     </net>
-    <net code="31" name="Net-(CONN1-Pad5)">
-      <node ref="CONN1" pin="5"/>
+    <net code="28" name="Switched12V">
+      <node ref="D2" pin="2"/>
+      <node ref="R6" pin="1"/>
+      <node ref="P1" pin="5"/>
     </net>
-    <net code="32" name="Net-(CONN1-Pad1)">
-      <node ref="CONN1" pin="1"/>
+    <net code="29" name="Net-(FTDIProg1-Pad5)">
+      <node ref="FTDIProg1" pin="5"/>
+    </net>
+    <net code="30" name="Net-(FTDIProg1-Pad1)">
+      <node ref="FTDIProg1" pin="1"/>
     </net>
   </nets>
 </export>
