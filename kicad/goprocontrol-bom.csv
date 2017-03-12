@@ -1,11 +1,11 @@
 Source,/Users/aturner/GIT/gopro-control/kicad/goprocontrol.sch
 Kicad Rev,Eeschema 4.0.5
-Generated Date,Saturday, February 25, 2017 'AMt' 11:38:22 AM
+Generated Date,Saturday, March 11, 2017 'PMt' 07:09:48 PM
 
 Title,GoProControl with Adjustable Delay Timer
 Company,Aaron Turner <synfinatic@gmail.com>
 Revision,v2.0
-Date Issue,2017-02-25
+Date Issue,2017-03-05
 Comment,https://synfin.net/goprocontrol
 Comment,Advanced GoProControl
 Comment,GoProControl with Power Control
@@ -41,10 +41,7 @@ C3,0.1uf,device,C
 Q5,IRLML6344,device,Q_NMOS_GSD
 R12,1k,device,R
 ROpt1,100k,device,R
-CONN1,FTDI,synfinatic,FTDI
-JP1,Jumper_NC_Dual,device,Jumper_NC_Dual
-R5,22k,device,R
-R4,10k,device,R
-D1,B5817WS,device,D_Schottky
+FTDIProg1,FTDI,synfinatic,FTDI
 D3,B5817WS,device,D_Schottky
 D4,B5817WS,device,D_Schottky
+P2,CONN_01X02,conn,CONN_01X02
