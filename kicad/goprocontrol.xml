@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/Users/aturner/GIT/gopro-control/kicad/goprocontrol.sch</source>
-    <date>Sunday, October 01, 2017 'PMt' 05:01:44 PM</date>
+    <date>Saturday, October 28, 2017 'PMt' 05:16:55 PM</date>
     <tool>Eeschema 4.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -351,6 +351,9 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="device">
+      <uri>/Library/Application Support/kicad/library/device.lib</uri>
+    </library>
     <library logical="goprocontrol-cache">
       <uri>/Users/aturner/GIT/gopro-control/kicad/goprocontrol-cache.lib</uri>
     </library>
@@ -359,9 +362,6 @@
     </library>
     <library logical="switches">
       <uri>/Library/Application Support/kicad/library/switches.lib</uri>
-    </library>
-    <library logical="device">
-      <uri>/Library/Application Support/kicad/library/device.lib</uri>
     </library>
     <library logical="synfinatic">
       <uri>/Users/aturner/KiCad/libs/kicad-synfinatic/synfinatic.lib</uri>
